@@ -1,7 +1,7 @@
 import React from 'react';
 
 function Match() {
-  return <div />;
+  return <h1>Match</h1>;
 }
 
 export default Match;
