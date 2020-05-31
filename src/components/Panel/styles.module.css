@@ -1,0 +1,28 @@
+.panelWrapper {
+  width: 100%;
+  margin: 150px 0;
+}
+
+.panel {
+  margin: 0 auto;
+  max-width: 1640px;
+  display: grid;
+  grid-template-columns: repeat(2,1fr);
+  grid-gap: 120px;
+  padding: 5rem;
+}
+
+.panel > img {
+  width: 100%;
+}
+
+.panel p {
+  line-height: 57px;
+  font-size: 2rem;
+  color: white;
+}
+
+.panel > section {
+  display: flex;
+  align-items: center;
+}
