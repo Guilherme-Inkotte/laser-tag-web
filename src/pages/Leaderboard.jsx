@@ -1,7 +1,16 @@
 import React from 'react';
+import LeaderboardHead from '../components/LeaderboardHead'
+import LeaderboardBody from '../components/LeaderboardBody'
+import Footer from '../components/Footer'
 
 function Leaderboard() {
-  return <h1>Leaderboard</h1>;
+  return (
+    <>
+      <LeaderboardBody />
+      <Footer />
+    </>
+  )
+  ;
 }
 
 export default Leaderboard;

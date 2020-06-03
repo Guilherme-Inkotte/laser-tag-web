@@ -1,5 +1,6 @@
 import React from 'react';
 import styles from './styles.module.css';
+import logo from '../../assets/logo_1.png';
 
 function Footer() {
   return (
@@ -27,7 +28,7 @@ function Footer() {
           </div>
         </div>
         <div className={styles.rightSide}>
-          <h3>LOGO</h3>
+          <img alt="Logo" src={logo} />
           <p>&copy;Lasertag</p>
         </div>
       </div>

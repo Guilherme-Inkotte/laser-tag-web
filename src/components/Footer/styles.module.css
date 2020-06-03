@@ -1,6 +1,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;700&display=swap%27');
 
 .footerWrapper {
+    margin-top: 16px;
     width: 100%;
     background-color: #364F6B;
     padding: 20px 80px;
