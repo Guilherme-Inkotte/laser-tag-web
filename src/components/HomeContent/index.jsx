@@ -6,9 +6,8 @@ import imageOne from '../../assets/example.png'
 import imageTwo from '../../assets/example2.png'
 import imageThree from '../../assets/example3.png'
 
-import { Panel } from '../'
-
-import { Button } from '../utils'
+import { Panel, LoginModal, RegisterModal } from '../'
+import { Toggle, Button } from '../utils'
 
 export default function HomeContent() {
   return (
@@ -17,8 +16,21 @@ export default function HomeContent() {
         <div className={styles.heroContent}>
           <h1 className={styles.heroHeader}>LOREM IPSUM DOLOR SIT AMET</h1>
           <div>
-            <Button primary width="50%">entrar</Button>
-            <Button width="50%">criar conta</Button>
+            <Toggle render={({ on, toggle }) => (
+              <>
+                {on && <LoginModal toggleHandler={toggle} />}
+                <Button primary width="50%" onClick={toggle}>entrar</Button>
+              </>
+            )} />
+            <Toggle render={({ on, toggle }) => (
+              <>
+                {on && <RegisterModal toggleHandler={toggle} />}
+                <Button width="50%" onClick={toggle}>criar conta</Button>
+              </>
+            )}
+
+            />
+
           </div>
         </div>
         <img src={imageOne} alt="imagem" />

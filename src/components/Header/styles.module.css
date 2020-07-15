@@ -4,6 +4,7 @@
   top:0;
   right:0;
   background: #364F6B;
+  box-shadow: 0 5px 5px rgba(0,0,0,0.15);
 }
 .header {
   max-width: 1460px;
