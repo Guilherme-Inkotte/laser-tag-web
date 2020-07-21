@@ -58,7 +58,26 @@
     border: solid 2px #519BFC;
     color: #519BFC;
     font-weight: 700;
+    font-size: 16px;
     margin: 0 8px;
+    display: flex;
+    justify-content: center;
+    text-align: center;
+}
+
+.selectedPageButton {
+    border-radius: 4px;
+    width: 28px;
+    height: 28px;
+    line-height: 28px;
+    font-weight: 700;
+    font-size: 16px;
+    margin: 0 8px;
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    background-color: #519BFC;
+    color: #FFF;
 }
 
 .pageNavigation button:hover {

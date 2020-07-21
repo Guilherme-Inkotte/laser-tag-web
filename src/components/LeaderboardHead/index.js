@@ -6,7 +6,7 @@ function LeaderboardHead() {
     <div className={styles.head}>
       <p className={styles.fixedLabel}>Colocação</p>
       <p className={styles.flexLabel}>Nome</p>
-      <p className={styles.fixedLabel}>Pontos</p>
+      <p className={styles.fixedLabel}>Abates</p>
     </div>
   );
 }
