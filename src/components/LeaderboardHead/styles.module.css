@@ -1,0 +1,22 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;700&display=swap%27');
+
+.head {
+    padding: 1rem;
+    background-color: #519BFC;
+    display: flex;
+    
+    margin: 0 auto;
+}
+
+.head p {
+    color: #FFF;
+    font-family: 'Roboto', sans-serif
+}
+
+.fixedLabel {
+    width: 12ch;
+}
+
+.flexLabel {
+    flex: 1;
+}

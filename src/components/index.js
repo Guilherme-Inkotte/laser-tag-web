@@ -4,6 +4,7 @@ import Panel from './Panel'
 import HomeContent from './HomeContent'
 import LoginModal from './LoginModal'
 import RegisterModal from './RegisterModal'
+import LeaderboardBody from './LeaderboardBody'
 
 export {
   Footer,
@@ -11,5 +12,6 @@ export {
   Panel,
   HomeContent,
   LoginModal,
-  RegisterModal
+  RegisterModal,
+  LeaderboardBody
 }

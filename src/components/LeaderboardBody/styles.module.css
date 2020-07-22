@@ -1,0 +1,64 @@
+.container {
+    max-width: 1560px;
+    margin: 0 auto;
+}
+
+.pageNavigation {
+    margin: 1rem 0;
+    display: flex;
+    justify-content: center;
+}
+
+.pageNavigation button {
+    border-radius: 5px;
+    padding: 1rem;
+    background-color: transparent;
+    border: solid 2px #519BFC;
+    color: #519BFC;
+    font-weight:bold;
+    margin: 0 .5rem;
+}
+
+.selectedPageButton {
+    border-radius: 5px;
+    font-weight: bold;
+    padding: 1rem;
+    background-color: #519BFC;
+    color: #FFF;
+}
+
+.pageNavigation button:hover {
+    transition: 0.2s;
+    background-color: #519BFC;
+    color: #FFF;
+}
+
+.table {
+    width: 100%;
+    border-collapse: separate;
+    border-spacing:  0 15px;
+    color: #519BFC;
+    text-transform: capitalize;
+}
+
+.tableHeader {
+    background: #519BFC;
+    color: #FFF;
+}
+
+.tableHeader > td:first-of-type, .tableHeader > td:last-of-type {
+    width: 10%;
+}
+
+.table td {
+    padding: 1rem;
+}
+
+.playerCell > td {
+    border: solid 2px #519BFC;
+    margin: 1rem;
+}
+.nameCell {
+    border-right: none !important;
+    border-left: none !important;
+}

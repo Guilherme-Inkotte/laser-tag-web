@@ -1,7 +1,14 @@
 import React from 'react';
+import { Footer, LeaderboardBody } from '../components'
 
 function Leaderboard() {
-  return <h1>Leaderboard</h1>;
+  return (
+    <>
+      <LeaderboardBody />
+      <Footer />
+    </>
+  )
+    ;
 }
 
 export default Leaderboard;
