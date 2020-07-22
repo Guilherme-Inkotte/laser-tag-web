@@ -1,1 +1,7 @@
-export { default as Example } from "./Example";
+import Footer from './Footer'
+import LeaderboardBody from './LeaderboardBody'
+
+export {
+  Footer,
+  LeaderboardBody
+}

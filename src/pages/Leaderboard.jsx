@@ -1,6 +1,5 @@
 import React from 'react';
-import LeaderboardBody from '../components/LeaderboardBody'
-import Footer from '../components/Footer'
+import { Footer, LeaderboardBody } from '../components'
 
 function Leaderboard() {
   return (
@@ -9,7 +8,7 @@ function Leaderboard() {
       <Footer />
     </>
   )
-  ;
+    ;
 }
 
 export default Leaderboard;

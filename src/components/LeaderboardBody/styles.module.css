@@ -1,86 +1,64 @@
-@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;700&display=swap%27');
-
 .container {
-    width: 90%;
-    font-family: 'Roboto', sans-serif;
-    margin: auto;
-}
-
-.yourPosition {
-    margin: 12px 0;
-}
-
-.title {
-    font-family: 'Roboto', sans-serif;
-    margin: 20px 0;
-    font-size: 20px;
-    background-color: #364F6B;
-    color: #FFF;
-    line-height: 2em;
-    padding-left: 5%;
-}
-
-.tableRow {
-    height: 36px;
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    border: solid 2px #519BFC;
-    margin: 8px 0;
-    color: #519BFC;
-}
-
-.fixedLabel {
-    width: 12ch;
-    padding: 8px;
-}
-
-.flexLabel {
-    flex: 1;
-    border: solid 2px #519BFC;
-    border-top: none;
-    border-bottom: none;
-    padding: 8px;
-    padding-right: 0;
+    max-width: 1560px;
+    margin: 0 auto;
 }
 
 .pageNavigation {
-    margin-top: 8px;
+    margin: 1rem 0;
     display: flex;
     justify-content: center;
 }
 
 .pageNavigation button {
-    border-radius: 4px;
-    width: 28px;
-    height: 28px;
+    border-radius: 5px;
+    padding: 1rem;
     background-color: transparent;
     border: solid 2px #519BFC;
     color: #519BFC;
-    font-weight: 700;
-    font-size: 16px;
-    margin: 0 8px;
-    display: flex;
-    justify-content: center;
-    text-align: center;
+    font-weight:bold;
+    margin: 0 .5rem;
 }
 
 .selectedPageButton {
-    border-radius: 4px;
-    width: 28px;
-    height: 28px;
-    line-height: 28px;
-    font-weight: 700;
-    font-size: 16px;
-    margin: 0 8px;
-    display: flex;
-    justify-content: center;
-    text-align: center;
+    border-radius: 5px;
+    font-weight: bold;
+    padding: 1rem;
     background-color: #519BFC;
     color: #FFF;
 }
 
 .pageNavigation button:hover {
+    transition: 0.2s;
     background-color: #519BFC;
     color: #FFF;
+}
+
+.table {
+    width: 100%;
+    border-collapse: separate;
+    border-spacing:  0 15px;
+    color: #519BFC;
+    text-transform: capitalize;
+}
+
+.tableHeader {
+    background: #519BFC;
+    color: #FFF;
+}
+
+.tableHeader > td:first-of-type, .tableHeader > td:last-of-type {
+    width: 10%;
+}
+
+.table td {
+    padding: 1rem;
+}
+
+.playerCell > td {
+    border: solid 2px #519BFC;
+    margin: 1rem;
+}
+.nameCell {
+    border-right: none !important;
+    border-left: none !important;
 }
