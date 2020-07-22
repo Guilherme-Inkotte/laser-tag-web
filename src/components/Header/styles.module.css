@@ -24,6 +24,13 @@
   text-decoration: none;
   color: white;
   margin: 0 25px;
+  display: flex;
+  align-items: center;
+}
+
+.logo > img {
+  margin-right: 1rem;
+  width: 25%;
 }
 
 

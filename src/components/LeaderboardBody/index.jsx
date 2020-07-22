@@ -1,7 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import styles from './styles.module.css';
 import api from '../../api';
-// import LeaderboardHead from '../LeaderboardHead';
 
 function LeaderboardBody() {
 

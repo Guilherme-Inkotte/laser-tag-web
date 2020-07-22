@@ -1,9 +1,20 @@
 import React from 'react';
 import styles from './styles.module.css';
 
-function Footer() {
+import logo from '../../assets/logo_2.png'
+
+function Footer(props) {
+
+  const positionFixed =
+    props.fixed ?
+      {
+        position: "fixed",
+        bottom: 0
+      } :
+      null
+
   return (
-    <footer className={styles.footerWrapper}>
+    <footer className={styles.footerWrapper} style={positionFixed}>
       <div className={styles.content}>
         <div className={styles.leftSide}>
           <small>MEMBROS</small>
@@ -33,7 +44,7 @@ function Footer() {
           </div>
         </div>
         <div className={styles.rightSide}>
-          <h6>LOGO</h6>
+          <img src={logo} className={styles.logo} alt="logo" />
           <p>&copy;Lasertag Tecpuc</p>
         </div>
       </div>

@@ -26,3 +26,14 @@
   display: flex;
   justify-content: space-between;
 }
+
+.rightSide {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.logo {
+  width: 50%;
+}

@@ -1,11 +1,12 @@
 import React from 'react';
-import { Footer, LeaderboardBody } from '../components'
+import { Header, Footer, LeaderboardBody } from '../components'
 
 function Leaderboard() {
   return (
     <>
+      <Header />
       <LeaderboardBody />
-      <Footer />
+      <Footer fixed />
     </>
   )
     ;
