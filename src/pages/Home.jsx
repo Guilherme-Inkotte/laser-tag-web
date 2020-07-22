@@ -1,7 +1,14 @@
 import React from 'react';
+import { Header, Footer, HomeContent } from '../components'
 
 function Home() {
-  return <h1>Home</h1>;
+  return (
+    <>
+      <Header />
+      <HomeContent />
+      <Footer />
+    </>
+  )
 }
 
 export default Home;

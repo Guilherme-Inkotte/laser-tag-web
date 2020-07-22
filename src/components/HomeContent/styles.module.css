@@ -1,0 +1,17 @@
+.heroContent {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.heroContent > div {
+  width: 80%;
+  display: flex;
+  justify-content: space-between;
+}
+
+.heroHeader {
+  font-size: 2.5rem;
+  font-weight: normal;
+  color: #364F6B;
+}

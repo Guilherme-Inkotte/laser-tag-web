@@ -1,0 +1,28 @@
+.footerWrapper {
+  width: 100%;
+  background: #364F6B;
+  color: white;
+  line-height: 1.5;
+  padding: 1rem;
+}
+.footerWrapper a {
+  color: white;
+  text-decoration: none;
+}
+.footerWrapper li {
+  list-style: none;
+}
+
+.content {
+  max-width: 1460px;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+  padding: 1rem 0;
+}
+
+.leftSide {
+  width: 50%;
+  display: flex;
+  justify-content: space-between;
+}
