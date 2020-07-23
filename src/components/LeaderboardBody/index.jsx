@@ -17,7 +17,7 @@ function LeaderboardBody() {
   useEffect(() => {
     const getLeaderboard = async () => {
       try {
-        const res = await api.get(`/dummy`)
+        const res = await api.get(`/players/leaderboard?page=${currentPage}`)
         console.log(res.data)
         setPlayers(res.data.players)
         setTotalPages(Math.ceil(res.data.playersCount / 10))
