@@ -1,7 +1,12 @@
 import React from 'react';
+import { Header, ConfigMatch, Footer } from '../components';
 
 function Match() {
-  return <h1>Match</h1>;
+  return <>
+    <Header />
+    <ConfigMatch />
+    <Footer fixed />
+  </>;
 }
 
 export default Match;

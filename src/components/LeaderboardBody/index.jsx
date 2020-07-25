@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import styles from './styles.module.css';
-import api from '../../api';
+import api, { socket } from '../../api';
 
 function LeaderboardBody() {
 
@@ -8,7 +8,13 @@ function LeaderboardBody() {
   const [totalPages, setTotalPages] = useState()
   const [currentPage, setCurrentPage] = useState(1)
 
+  // const [receivedInfo, setReceivedInfo] = useState("ainda nada")
 
+  // socket.on('startMatch', receivedInfo => setReceivedInfo(receivedInfo) )
+
+  // const emitToSocketIO = () => {
+  //   socket.emit('startMatch')
+  // }
 
   const changePage = to => {
     setCurrentPage(to);
@@ -44,7 +50,9 @@ function LeaderboardBody() {
             })
           }
         </div> */}
-
+        
+        {/* <button style={{marginTop: 40}} onClick={() => emitToSocketIO()}>teste socket.io</button>
+        <p>{receivedInfo}</p> */}
         <table className={styles.table}>
           <thead className={styles.tableHeader}>
             <td>Colocação</td>

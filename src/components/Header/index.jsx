@@ -20,7 +20,7 @@ function Header() {
           </Link>
         </div>
         <div className={styles.rightSide}>
-          <Link to="#" className={styles.navItem}>Jogar</Link>
+          <Link to="/match" className={styles.navItem}>Jogar</Link>
           <Link to="/leaderboard" className={styles.navItem}>Leaderboard</Link>
           <Toggle render={({ on, toggle }) => (
             <>
