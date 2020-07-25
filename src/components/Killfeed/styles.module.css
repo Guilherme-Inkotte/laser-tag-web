@@ -1,0 +1,18 @@
+.container {
+  width: 30%;
+  text-align: center;
+  margin: 0 auto;
+  color: #364F6B;
+}
+
+.container h1, .container h2 {
+  font-weight: normal;
+}
+
+.killfeed {
+  margin-top: 1rem;
+  list-style: none;
+}
+.killfeed > li {
+  margin: .5rem;
+}

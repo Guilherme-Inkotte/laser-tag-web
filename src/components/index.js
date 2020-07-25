@@ -5,6 +5,8 @@ import HomeContent from './HomeContent'
 import LoginModal from './LoginModal'
 import RegisterModal from './RegisterModal'
 import LeaderboardBody from './LeaderboardBody'
+import Killfeed from './Killfeed'
+import Team from './Team'
 
 export {
   Footer,
@@ -13,5 +15,7 @@ export {
   HomeContent,
   LoginModal,
   RegisterModal,
-  LeaderboardBody
+  LeaderboardBody,
+  Killfeed,
+  Team
 }
