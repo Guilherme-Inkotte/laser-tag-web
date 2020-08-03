@@ -17,19 +17,7 @@ export default function Team(props) {
         <div className={styles.teamGrid} color={color}>
           <div className={styles.player}>
             <BsFillPersonFill color={color} size={150} />
-            <p style={cssColor}>Jogador 1</p>
-          </div>
-          <div className={styles.player} >
-            <BsFillPersonFill color={color} size={150} />
-            <p style={cssColor}>Jogador 2</p>
-          </div>
-          <div className={styles.player} >
-            <BsFillPersonFill color={color} size={150} />
-            <p style={cssColor}>Jogador 3</p>
-          </div>
-          <div className={styles.player} >
-            <BsFillPersonFill color={color} size={150} />
-            <p style={cssColor}>Jogador 4</p>
+            <p style={cssColor}>Jogador {colorName}</p>
           </div>
         </div>
       </div>

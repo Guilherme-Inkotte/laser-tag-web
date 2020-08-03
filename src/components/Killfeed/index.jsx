@@ -4,11 +4,36 @@ import styles from './styles.module.css'
 
 import { GiPistolGun } from 'react-icons/gi'
 
+import { socket } from '../../api'
+
 export default function Killfeed() {
 
-  const [timer, setTimer] = useState(475);
+
+  const [deathInfo, setDeathInfo] = useState([])
+  const [timer, setTimer] = useState(600);
   const [seconds, setSeconds] = useState("00");
   const [minutes, setMinutes] = useState(10);
+  const [blueScore, setBlueScore] = useState(0)
+  const [redScore, setRedScore] = useState(0)
+
+  socket.on('death', deathInfo => () => {
+    setDeathInfo(initial => [...initial, deathInfo]);
+    switch (deathInfo.killer.player) {
+      case 1:
+        setBlueScore(score => score + 1);
+        break;
+      case 2:
+        setRedScore(score => score + 1);
+        break;
+      default: break;
+    }
+  }
+  )
+  // useEffect(() => {
+  //   socket.on('teste', teste => console.log(teste))
+  // }, [])
+
+
 
   useEffect(() => {
     const interval = setInterval(() => {
@@ -25,26 +50,26 @@ export default function Killfeed() {
         setMinutes(minutes)
         setSeconds(seconds)
       }
-
-
     }, 1000);
+    if (timer < 0) clearInterval(interval)
     return () => clearInterval(interval);
   }, [timer]);
 
   return (
     <div className={styles.container}>
       <div className={styles.gameInfo}>
-        <h1>{10} - {10}</h1>
+        <h1>{redScore} - {blueScore}</h1>
         <h2>{minutes}:{seconds}</h2>
       </div>
-      <ul className={styles.killfeed}>
-        <li><span span style={{ color: "#FC5185" }}>Jogador 1</span> <GiPistolGun /> <span style={{ color: "#519BFC" }}>Jogador 1</span></li>
-        <li><span span style={{ color: "#519BFC" }}>Jogador 1</span> <GiPistolGun /> <span style={{ color: "#FC5185" }}>Jogador 1</span></li>
-        <li><span span style={{ color: "#FC5185" }}>Jogador 1</span> <GiPistolGun /> <span style={{ color: "#519BFC" }}>Jogador 1</span></li>
-        <li><span span style={{ color: "#519BFC" }}>Jogador 1</span> <GiPistolGun /> <span style={{ color: "#FC5185" }}>Jogador 1</span></li>
-        <li><span span style={{ color: "#FC5185" }}>Jogador 1</span> <GiPistolGun /> <span style={{ color: "#519BFC" }}>Jogador 1</span></li>
-        <li><span span style={{ color: "#519BFC" }}>Jogador 1</span> <GiPistolGun /> <span style={{ color: "#FC5185" }}>Jogador 1</span></li>
-      </ul>
+      <div className={styles.killfeedInfo}>
+        <ul className={styles.killfeed}>
+          {
+            deathInfo.map((info, key) => (
+              <li key={key}><span style={{ color: info.killer.team }}>{info.killer.player}</span> <GiPistolGun /> <span style={{ color: info.killed.team }}>{info.killed.player}</span></li>
+            ))
+          }
+        </ul>
+      </div>
     </div>
   )
 }

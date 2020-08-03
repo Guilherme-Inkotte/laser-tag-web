@@ -16,3 +16,20 @@
 .killfeed > li {
   margin: .5rem;
 }
+.killfeedContainer {
+  height: 25vh;
+  white-space: nowrap;
+  overflow: auto;
+}
+
+.killfeedContainer::-webkit-scrollbar {
+  width: 10px;
+}
+
+.killfeedContainer::-webkit-scrollbar-track {
+  background: transparent; 
+}
+ 
+.killfeedContainer::-webkit-scrollbar-thumb {
+  background: #364F6B; 
+}

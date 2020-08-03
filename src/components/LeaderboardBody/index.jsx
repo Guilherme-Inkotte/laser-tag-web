@@ -1,20 +1,12 @@
 import React, { useState, useEffect } from 'react';
 import styles from './styles.module.css';
-import api, { socket } from '../../api';
+import api from '../../api';
 
 function LeaderboardBody() {
 
   const [players, setPlayers] = useState([])
   const [totalPages, setTotalPages] = useState()
   const [currentPage, setCurrentPage] = useState(1)
-
-  // const [receivedInfo, setReceivedInfo] = useState("ainda nada")
-
-  // socket.on('startMatch', receivedInfo => setReceivedInfo(receivedInfo) )
-
-  // const emitToSocketIO = () => {
-  //   socket.emit('startMatch')
-  // }
 
   const changePage = to => {
     setCurrentPage(to);
@@ -38,21 +30,6 @@ function LeaderboardBody() {
   return (
     <>
       <div className={styles.container}>
-        {/* <LeaderboardHead />
-        <div className={styles.globalLeaderboard}>
-          {
-            players.map((player, index) => {
-              return <div className={styles.tableRow}>
-                <p className={styles.fixedLabel}>{1 + index + (10 * (currentPage - 1))}</p>
-                <p className={styles.flexLabel}>{player.name}</p>
-                <p className={styles.fixedLabel}>{player.kills}</p>
-              </div>
-            })
-          }
-        </div> */}
-        
-        {/* <button style={{marginTop: 40}} onClick={() => emitToSocketIO()}>teste socket.io</button>
-        <p>{receivedInfo}</p> */}
         <table className={styles.table}>
           <thead className={styles.tableHeader}>
             <td>Colocação</td>
