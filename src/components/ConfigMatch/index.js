@@ -1,13 +1,13 @@
 import React, { useState } from 'react';
 import styles from './styles.module.css';
-import { Input, Modal, Button, Heading } from '../utils'
+import { Modal, Button, Heading, Toggle } from '../utils'
 
 function ConfigMatch(props) {
   const [minutes, setMinutes] = useState()
   const [seconds, setSeconds] = useState()
   const [maxScore, setMaxScore] = useState()
   return (
-    <Modal toggleHandler={props.toggleHandler}>
+    <Modal>
       <Heading>Criar Nova Partida</Heading>
       <div className={styles.formContainer}>
         <div className={styles.inputContainer}>
@@ -25,10 +25,10 @@ function ConfigMatch(props) {
           </div>
         </div>
       </div>
-      <Button rounded primary width="60%" style={{ marginBottom: "2rem" }}>Entrar</Button>
+      <Button rounded primary width="60%" style={{ marginBottom: "2rem" }} onClick={props.toggleHandler}>Entrar</Button>
     </Modal>
   )
-  
+
 }
 
 export default ConfigMatch;
