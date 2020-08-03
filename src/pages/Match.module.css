@@ -1,0 +1,7 @@
+.matchContainer {
+  max-width: 1560px;
+  margin: 0 auto;
+  margin-top: 10rem;
+  display: flex;
+  justify-content: space-between;
+}

@@ -7,6 +7,9 @@ import RegisterModal from './RegisterModal'
 import LeaderboardBody from './LeaderboardBody'
 import ConfigMatch from './ConfigMatch'
 
+import Killfeed from './Killfeed'
+import Team from './Team'
+
 export {
   Footer,
   Header,
@@ -15,5 +18,7 @@ export {
   LoginModal,
   RegisterModal,
   LeaderboardBody,
-  ConfigMatch
+  ConfigMatch,
+  Killfeed,
+  Team
 }
