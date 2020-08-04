@@ -16,7 +16,9 @@ export default function Killfeed() {
   const [blueScore, setBlueScore] = useState(0)
   const [redScore, setRedScore] = useState(0)
 
-  socket.on('death', deathInfo => () => {
+  useEffect(() => {
+  socket.on('killfeed', deathInfo => {
+    console.log("recebido")
     setDeathInfo(initial => [...initial, deathInfo]);
     switch (deathInfo.killer.player) {
       case 1:
@@ -29,11 +31,7 @@ export default function Killfeed() {
     }
   }
   )
-  // useEffect(() => {
-  //   socket.on('teste', teste => console.log(teste))
-  // }, [])
-
-
+  }, [])
 
   useEffect(() => {
     const interval = setInterval(() => {
@@ -65,7 +63,7 @@ export default function Killfeed() {
         <ul className={styles.killfeed}>
           {
             deathInfo.map((info, key) => (
-              <li key={key}><span style={{ color: info.killer.team }}>{info.killer.player}</span> <GiPistolGun /> <span style={{ color: info.killed.team }}>{info.killed.player}</span></li>
+              <li key={key}><span style={{ color: info.killer.team }}>Jogador {info.killer.player}</span> <GiPistolGun /> <span style={{ color: info.killed.team }}>Jogador {info.killed.player}</span></li>
             ))
           }
         </ul>

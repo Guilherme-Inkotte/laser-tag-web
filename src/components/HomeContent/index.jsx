@@ -55,7 +55,7 @@ export default function HomeContent() {
         <img src={imageOne} alt="imagem" />
         <section>
           <p>
-          O colete é uma placa Arduino Uno com sensor LDR, a arma um Arduino Nano com um módulo laser. A comunicação entre as placas e a API em Python acontece por meio do shield Ethernet. Para o site, foi utilizado o ReactJS como framework.
+          O colete é uma placa Arduino Uno com sensor LDR, a arma um Arduino Nano com um módulo laser. A comunicação entre as placas e a API em Node.js acontece por meio do shield Ethernet. Para o site, foi utilizado o ReactJS como framework.
           </p>
         </section>
       </Panel>
