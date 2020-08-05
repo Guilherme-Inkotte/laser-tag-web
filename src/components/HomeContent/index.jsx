@@ -48,7 +48,7 @@ export default function HomeContent() {
       <Panel>
         <section>
           <p>
-            Este projeto final foi criado pelo grupo 5 do terceiro ano turma A. As inspirações para a concepção dele foram os projetos Duino Laser Tag (Instructables) e Tazer Tag (Michael Reeves).
+            Este projeto final foi criado pelo grupo 4 do terceiro ano turma A. As inspirações para a concepção dele foram os projetos Duino Laser Tag (Instructables) e Tazer Tag (Michael Reeves).
           </p>
         </section>
         <img src={imageThree} alt="imagem" />
