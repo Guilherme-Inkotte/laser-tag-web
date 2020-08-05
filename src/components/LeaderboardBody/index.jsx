@@ -16,7 +16,6 @@ function LeaderboardBody() {
     const getLeaderboard = async () => {
       try {
         const res = await api.get(`/players/leaderboard?page=${currentPage}`)
-        console.log(res.data)
         setPlayers(res.data.players)
         setTotalPages(Math.ceil(res.data.playersCount / 10))
       } catch (err) {
@@ -48,9 +47,8 @@ function LeaderboardBody() {
             }
           </tbody>
         </table>
-
         <div className={styles.pageNavigation}>
-          <button onClick={() => changePage(1)}>&#171;</button>
+          <button onClick={() => changePage(page => page === 1 ? 1 : page - 1)}>&#171;</button>
           {currentPage - 1 > 0
             && <button onClick={() => changePage(currentPage - 1)}>{currentPage - 1}</button>
           }
@@ -58,9 +56,10 @@ function LeaderboardBody() {
           {currentPage + 1 <= totalPages
             && <button onClick={() => changePage(currentPage + 1)}>{currentPage + 1}</button>
           }
-          <button onClick={() => changePage(totalPages)}>&#187;</button>
+          <button onClick={() => changePage(page => page === totalPages ? totalPages : page + 1)}>&#187;</button>
         </div>
       </div>
+
     </>
   );
 }

@@ -5,6 +5,7 @@ import HomeContent from './HomeContent'
 import LoginModal from './LoginModal'
 import RegisterModal from './RegisterModal'
 import LeaderboardBody from './LeaderboardBody'
+import PlayerNameModal from './PlayerNameModal'
 
 import Killfeed from './Killfeed'
 import Team from './Team'
@@ -19,4 +20,5 @@ export {
   LeaderboardBody,
   Killfeed,
   Team,
+  PlayerNameModal
 }

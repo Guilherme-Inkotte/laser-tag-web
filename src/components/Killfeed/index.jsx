@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react'
+import React, { useState, useEffect, useCallback } from 'react'
 
 import styles from './styles.module.css'
 
@@ -6,32 +6,44 @@ import { GiPistolGun } from 'react-icons/gi'
 
 import { socket } from '../../api'
 
+import { PlayerNameModal } from '../'
+
+
+
 export default function Killfeed() {
 
-
   const [deathInfo, setDeathInfo] = useState([])
-  const [timer, setTimer] = useState(600);
+  const [timer, setTimer] = useState(90);
   const [seconds, setSeconds] = useState("00");
   const [minutes, setMinutes] = useState(10);
-  const [blueScore, setBlueScore] = useState(0)
-  const [redScore, setRedScore] = useState(0)
+  const [blueScore, setBlueScore] = useState(0);
+  const [isMatchFinished, setMatchStatus] = useState(false);
+  const [redScore, setRedScore] = useState(0);
+  const [winnerTeam, setWinnerTeam] = useState();
 
   useEffect(() => {
-  socket.on('killfeed', deathInfo => {
-    console.log("recebido")
-    setDeathInfo(initial => [...initial, deathInfo]);
-    switch (deathInfo.killer.player) {
-      case 1:
-        setBlueScore(score => score + 1);
-        break;
-      case 2:
-        setRedScore(score => score + 1);
-        break;
-      default: break;
+    socket.on('killfeed', deathInfo => {
+      setDeathInfo(initial => [...initial, deathInfo]);
+      switch (deathInfo.killer.player) {
+        case 1:
+          setBlueScore(score => score + 1);
+          break;
+        case 2:
+          setRedScore(score => score + 1);
+          break;
+        default: break;
+      }
     }
-  }
-  )
+    )
   }, [])
+
+  const handleWinner = useCallback(
+    () => {
+      if (redScore > blueScore) setWinnerTeam("Time rosa")
+      else if (redScore < blueScore) setWinnerTeam("Time azul")
+    },
+    [redScore, blueScore]
+  )
 
   useEffect(() => {
     const interval = setInterval(() => {
@@ -49,12 +61,17 @@ export default function Killfeed() {
         setSeconds(seconds)
       }
     }, 1000);
-    if (timer < 0) clearInterval(interval)
+    if (timer < 0) {
+      setMatchStatus(true)
+      clearInterval(interval)
+      handleWinner();
+    }
     return () => clearInterval(interval);
-  }, [timer]);
+  }, [timer, handleWinner]);
 
   return (
     <div className={styles.container}>
+      {isMatchFinished && <PlayerNameModal winner={winnerTeam} blueScore={blueScore} redScore={redScore} />}
       <div className={styles.gameInfo}>
         <h1>{redScore} - {blueScore}</h1>
         <h2>{minutes}:{seconds}</h2>

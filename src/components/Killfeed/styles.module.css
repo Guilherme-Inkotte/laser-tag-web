@@ -12,24 +12,21 @@
 .killfeed {
   margin-top: 1rem;
   list-style: none;
+  height: 35vh;
+  white-space: nowrap;
+  overflow: auto;
 }
 .killfeed > li {
   margin: .5rem;
 }
-.killfeedContainer {
-  height: 25vh;
-  white-space: nowrap;
-  overflow: auto;
-}
-
-.killfeedContainer::-webkit-scrollbar {
+.killfeed::-webkit-scrollbar {
   width: 10px;
 }
 
-.killfeedContainer::-webkit-scrollbar-track {
+.killfeed::-webkit-scrollbar-track {
   background: transparent; 
 }
  
-.killfeedContainer::-webkit-scrollbar-thumb {
+.killfeed::-webkit-scrollbar-thumb {
   background: #364F6B; 
 }

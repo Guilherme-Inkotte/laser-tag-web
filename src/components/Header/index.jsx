@@ -22,7 +22,7 @@ function Header() {
         <div className={styles.rightSide}>
           <Link to="/match" className={styles.navItem}>Jogar</Link>
           <Link to="/leaderboard" className={styles.navItem}>Leaderboard</Link>
-          <Toggle render={({ on, toggle }) => (
+          {/* <Toggle render={({ on, toggle }) => (
             <>
               {on && <LoginModal toggleHandler={toggle} />}
               <Link to="#" className={styles.navItem} onClick={toggle}>Login</Link>
@@ -36,7 +36,7 @@ function Header() {
             </>
           )}
 
-          />
+          /> */}
         </div>
       </div>
     </div>

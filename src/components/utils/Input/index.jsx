@@ -6,7 +6,8 @@ import { BsPersonFill } from 'react-icons/bs'
 
 const BaseInput = styled.input.attrs(props => ({
   type: "text",
-  name: props.name
+  name: props.name,
+  onChange: props.changeHandler
 }))`
   border:none;
   border-radius: 25px;
@@ -30,7 +31,7 @@ const InputContainer = styled.div`
 const Input = props => {
   return (
     <InputContainer>
-      <BaseInput placeholder={props.placeholder} />
+      <BaseInput placeholder={props.placeholder} changeHandler={props.changeHandler} />
       {props.hasIcon && <BsPersonFill color="#519BFC" />}
     </InputContainer>
   )
