@@ -6,3 +6,7 @@ Cada jogador utiliza um colete, que possui um receptor, e uma pistola, que emite
 ### Tecnologias
 O projeto foi desenvolvido com React.js para o frontend, Node.js e Express para o backend e Arduino para a construção do hardware.
 A comunicação em tempo real é feita do Arduino para o backend, através de websockets, usando a biblioteca Socket.io
+
+#### Links
+Repo do código do Arduino: https://github.com/Guilherme-Inkotte/laser-tag
+Repo da API do site: https://github.com/Matheus-Maica/laser-tag-api
